@@ -14,12 +14,15 @@ const Login = () => {
         error,
       ] = useSignInWithEmailAndPassword(auth);
     //   const [token] = UseTooken(user || gUser)
-    const nagitive = useNavigate()
+    const navigate = useNavigate()
     const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password)
     }
     let form = location.state?.form?.pathname || "/";
+    if(user || gUser){
+        navigate(form, { replace: true });
+    }
 
     // useEffect(()=>{
     //     if (token) {
