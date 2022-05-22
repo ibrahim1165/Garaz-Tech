@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'],
   daisyui: {
     themes: [
       {
@@ -15,5 +15,5 @@ module.exports = {
       "cupcake",
     ],
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"),],
 }

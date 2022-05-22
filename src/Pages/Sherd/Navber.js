@@ -4,11 +4,11 @@ import cover from "../../image/coiver.png"
 
 const Navber = () => {
     return (
-        <div className="navbar bg-gray-900 px-8 text-white ">
+        <div className="navbar bg-gray-900 px-8 lg:text-white">
   <div className="navbar-start">
     <div className="dropdown">
 
-      <label tabIndex="0" className="btn btn-ghost lg:hidden">
+      <label tabIndex="0" className="btn btn-ghost lg:hidden ">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
       
@@ -25,7 +25,7 @@ const Navber = () => {
     <div className="w-24 rounded-lg">
     <img src={cover} alt="" />
     </div>
-    <Link to="/" className="btn btn-ghost normal-case text-xl"> Garage Tech</Link>
+    <Link to="/" className="btn btn-ghost normal-case text-xl text-white"> GARAGE TECH</Link>
   </div>
   <div className="navbar-end hidden lg:flex">
     <ul className="menu menu-horizontal p-0">
