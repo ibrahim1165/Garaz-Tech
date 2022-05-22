@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import auth from"../../firebase.init";
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Loading from '../Sherd/Loading';
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -34,7 +35,7 @@ const Login = () => {
         signInError= <p className='text-red-500'><small>{error?.message || gError?.message }</small></p>
     }
     if(loading || gLoading){
-        return;
+        return <Loading></Loading>;
     }
     return (
         <div className="flex justify-center h-screen items-center my-8">

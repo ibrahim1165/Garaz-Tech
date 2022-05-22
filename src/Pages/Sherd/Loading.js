@@ -2,7 +2,7 @@ import React from 'react';
 
 const Loading = () => {
     return (
-        <div className="items-center my-20">
+        <div className=" justify-center text-center my-20">
             <button class="btn btn-square loading"></button>
         </div>
     );
