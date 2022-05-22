@@ -4,7 +4,7 @@ import bikeCover from "../../image/bikecover.png"
 const About = () => {
     return (
         <div>
-            <div class="hero min-h-screen bg-base-200 px-20">
+            <div class="hero min-h-screen px-20">
                 <div class="hero-content flex-col lg:flex-row">
                     <img src={bikeCover}  alt="" />
                     <div>
