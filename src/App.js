@@ -3,6 +3,7 @@ import './App.css';
 import Login from './Pages/Auth/Login';
 import Singup from './Pages/Auth/Singup';
 import Home from './Pages/Home/Home';
+import Footer from './Pages/Sherd/Footer';
 import Navber from './Pages/Sherd/Navber';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Singup></Singup>}></Route>
       </Routes>
+      <Footer></Footer>
       
     </div>
   );
