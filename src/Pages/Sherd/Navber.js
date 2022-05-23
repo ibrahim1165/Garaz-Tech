@@ -1,8 +1,15 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 import cover from "../../image/coiver.png"
 
 const Navber = () => {
+  const [user] = useAuthState(auth);
+  const singout =()=>{
+    signOut(auth)
+}
     return (
         <div className="navbar bg-gray-900 px-8 lg:text-white">
   <div className="navbar-start">
@@ -18,7 +25,9 @@ const Navber = () => {
         <li><Link to="/review">Review</Link></li>
         <li><Link to="/contact">Contact</Link></li>
         <li><Link to="/about">About</Link></li>
-        <li><Link to="/login">Login</Link></li>
+        <li>{user?<button onClick={singout}>Logout</button>:
+        <Link to="/login">Login</Link> 
+          }</li>
        
       </ul>
     </div>
@@ -34,7 +43,9 @@ const Navber = () => {
         <li><Link to="/review">Review</Link></li>
         <li><Link to="/contact">Contact</Link></li>
         <li><Link to="/about">About</Link></li>
-        <li><Link to="/login">Login</Link></li>
+        <li>{user?<button onClick={singout}>Logout</button>:
+        <Link to="/login">Login</Link> 
+          }</li>
     </ul> 
   </div>
   {/* <div className="navbar-end">

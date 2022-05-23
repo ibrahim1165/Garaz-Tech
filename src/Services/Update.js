@@ -10,11 +10,11 @@ const Update = () => {
     }, [])
     return (
         <div>
-            <div class="hero min-h-screen bg-base-200">
+            <div class="hero min-h-screen my-12">
                 <div class="hero-content flex-col lg:flex-row">
                     <img src={user.img} alt="" />
                     <div className="px-6">
-                        <h1 class="text-5xl font-bold">Service: {user.name}</h1>
+                        <h1 class="text-5xl font-bold py-2 lg:py-0">Service: {user.name}</h1>
                         <p class="">Price: ${user.price}</p>
                         <p class="">availableQuantity: {user.availablequantity}</p>
                         <p class="">MinimumQuantity: {user.minimumquantity}</p>
