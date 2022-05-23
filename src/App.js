@@ -3,6 +3,7 @@ import './App.css';
 import Login from './Pages/Auth/Login';
 import Singup from './Pages/Auth/Singup';
 import Home from './Pages/Home/Home';
+import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Sherd/Footer';
 import Navber from './Pages/Sherd/Navber';
 import Services from './Services/Services';
@@ -19,6 +20,7 @@ function App() {
         <Route path="/signup" element={<Singup></Singup>}></Route>
         <Route path="/service" element={<Services></Services>}></Route>
         <Route path="/update/:id" element={<Update></Update>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
       
