@@ -5,6 +5,7 @@ import './App.css';
 import Login from './Pages/Auth/Login';
 import RequerAuth from './Pages/Auth/RequerAuth';
 import Singup from './Pages/Auth/Singup';
+import Dashboard from './Pages/Dashboard/Dashboard';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Sherd/Footer';
@@ -27,6 +28,14 @@ function App() {
         <Route path="/update/:id" element={<RequerAuth>
           <Update></Update>
         </RequerAuth>}></Route>
+        <Route path="/dashboard" element={<RequerAuth>
+          <Dashboard></Dashboard>
+        </RequerAuth>}>
+          
+
+
+
+        </Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
