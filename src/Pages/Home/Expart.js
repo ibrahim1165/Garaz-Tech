@@ -27,7 +27,7 @@ const Expart = () => {
         }
     ]
     return (
-        <div className="my-14 mx-auto container ">
+        <div className="my-14 mx-auto container">
             <div className="text-center">
                 <h2 className="text-3xl my-2 text-orange-400 font-bold">Our Team</h2>
                 <h1 className="text-5xl font-bold text-black">MEET OUR EXPERT TEAM</h1>
