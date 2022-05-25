@@ -5,12 +5,20 @@ const useAdmin = user => {
     const [addLoading, setAddLoading] = useState(true);
     useEffect(()=>{
         const email = user?.user?.email
+        fetch(`http://localhost:5000/admin/${email}`,{
+            method:'GET',
+            headers: { 
+                'Content-Type':'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        }
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            setAdmin(data.admin);
+            setAddLoading(false);
+        })
     },[])
-    return (
-        <div>
-            
-        </div>
-    );
+    return [admin,addLoading]
 };
 
 export default useAdmin;
