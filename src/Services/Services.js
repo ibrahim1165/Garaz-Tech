@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Footer from '../Pages/Sherd/Footer';
 import Service from './Service';
 
 const Services = () => {
@@ -23,6 +24,7 @@ const Services = () => {
                     ></Service>)
                 }
             </div>
+            <Footer></Footer>
         </div>
     );
 };
