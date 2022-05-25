@@ -4,6 +4,7 @@ import auth from"../../firebase.init";
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../Sherd/Loading';
+import UseToken from '../../Hooks/UseToken'
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -14,7 +15,7 @@ const Login = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
-    //   const [token] = UseTooken(user || gUser)
+      const [token] = UseToken(user || gUser)
     const navigate = useNavigate()
     const { register, formState: { errors }, handleSubmit } = useForm();
     const onSubmit = data => {
@@ -25,11 +26,11 @@ const Login = () => {
         navigate(form, { replace: true });
     }
 
-    // useEffect(()=>{
-    //     if (token) {
-    //         nagitive(form, { replace: true });
-    //     }
-    // },[token,form,nagitive])
+    useEffect(()=>{
+        if (token) {
+            navigate(form, { replace: true });
+        }
+    },[token,form,navigate])
     let signInError;
     if(error || gError){
         signInError= <p className='text-red-500'><small>{error?.message || gError?.message }</small></p>

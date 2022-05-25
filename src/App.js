@@ -8,6 +8,7 @@ import Singup from './Pages/Auth/Singup';
 import AddReview from './Pages/Dashboard/AddReview';
 import AllOrder from './Pages/Dashboard/AllOrder';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 import ManageItem from './Pages/Dashboard/ManageItem';
 import MyOrder from './Pages/Dashboard/MyOrder';
 import MyProfile from './Pages/Dashboard/MyProfile';
@@ -40,6 +41,7 @@ function App() {
         <Route path="/dashboard/review" element={<AddReview></AddReview>}></Route>
         <Route path="/dashboard/my-Order" element={<MyOrder></MyOrder>}></Route>
         <Route path="/dashboard/allorder" element={<AllOrder></AllOrder>}></Route>
+        <Route path="/dashboard/admin" element={<MakeAdmin></MakeAdmin>}></Route>
         <Route path="/dashboard/manage" element={<ManageItem></ManageItem>}></Route>
 
 
