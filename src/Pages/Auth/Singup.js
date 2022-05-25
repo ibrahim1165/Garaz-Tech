@@ -28,8 +28,8 @@ const Singup = () => {
 
     if (error || gUser || updateError) {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p> }
-    if(user || gUser){
-        navigate('/')
+    if(token){
+        navigate('/service')
     }
 
     const onSubmit = async data => {
