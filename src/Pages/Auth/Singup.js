@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfil
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import UseToken from '../../Hooks/UseToken';
 import Loading from '../Sherd/Loading';
 
 const Singup = () => {
@@ -16,7 +17,7 @@ const Singup = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
 
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-    // const [token] = UseToken(user || gUser)
+    const [token] = UseToken(user || gUser)
     const navigate = useNavigate();
 
     let signInError;
