@@ -5,6 +5,7 @@ import './App.css';
 import Login from './Pages/Auth/Login';
 import RequerAuth from './Pages/Auth/RequerAuth';
 import Singup from './Pages/Auth/Singup';
+import AddProduct from './Pages/Dashboard/AddProduct';
 import AddReview from './Pages/Dashboard/AddReview';
 import AllOrder from './Pages/Dashboard/AllOrder';
 import Dashboard from './Pages/Dashboard/Dashboard';
@@ -43,6 +44,7 @@ function App() {
         <Route path="/dashboard/allorder" element={<AllOrder></AllOrder>}></Route>
         <Route path="/dashboard/admin" element={<MakeAdmin></MakeAdmin>}></Route>
         <Route path="/dashboard/manage" element={<ManageItem></ManageItem>}></Route>
+        <Route path="addItem" element={<AddProduct></AddProduct>}></Route>
 
 
 

@@ -13,16 +13,38 @@ const AllOrder = () => {
 
     return (
         <div>
-           <h1 className="text-center text-2xl text-primary mt-4">All Order</h1> 
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 mt-8 mx-auto">
-               {
-                   orders.map(order=><AlOrderDisplay
+              <div>
+            <h2>All Order {orders.length}</h2>
+            <div class="overflow-x-auto">
+                <table class="table w-full">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Service Name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Quantity</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {
+                   orders.map((order,index)=><AlOrderDisplay
                    key={order._id}
                    order={order}
+                   index={index}
                    
                    ></AlOrderDisplay>)
                }
-           </div>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+           
+               
+           
         </div>
     );
 };

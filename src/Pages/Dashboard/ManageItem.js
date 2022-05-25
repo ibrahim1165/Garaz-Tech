@@ -2,12 +2,28 @@ import React, { useEffect, useState } from 'react';
 import Item from './Item';
 
 const ManageItem = () => {
-    const [services,setServices]= useState([])
+    const [services, setServices]= useState([])
     useEffect(()=>{
         fetch('http://localhost:5000/service')
         .then(res =>res.json())
         .then(data =>setServices(data))
     },[])
+
+    const DeleteBtn = (id) => {
+        const proceed = window.confirm("Are you sure you want to delete");
+        if (proceed) {
+          const url = `http://localhost:5000/service/${id}`;
+          fetch(url, {
+            method: "DELETE",
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              console.log("sucess", data);
+              const remaing = services.filter((item) => item._id !== id);
+              setServices(remaing);
+            });
+        }
+      };
     return (
         <div>
             <div className=" text-center">
@@ -20,6 +36,7 @@ const ManageItem = () => {
                     services.map(service =><Item
                     key={service.id}
                     service={service}
+                    DeleteBtn={DeleteBtn}
                     ></Item>)
                 }
             </div>
