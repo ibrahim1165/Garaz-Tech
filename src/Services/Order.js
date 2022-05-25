@@ -21,7 +21,6 @@ const Order = () => {
             phone: event.target.phone?.value,
             quantity: event.target.quantity?.value
         }
-        console.log(order)
         fetch('http://localhost:5000/order', {
             method: 'POST',
             headers: {
