@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AlOrderDisplay = ({ order,index }) => {
-    const { address, email, id, phone, quantity, service } = order
+    const { address, email, phone, quantity, service } = order
     return (
 
             <tr>

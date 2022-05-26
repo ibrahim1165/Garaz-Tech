@@ -1,31 +1,31 @@
 [
     {
-        "id":1,
         "name": "John Doe",
+        "rating":4,
         "description":"very fun bike and very comfortable, I did a trip 2000klms and many other smaller trips.",
-        "img":"https://t4.ftcdn.net/jpg/03/30/25/97/360_F_330259751_tGPEAq5F5bjxkkliGrb97X2HhtXBDc9x.jpg"
+        "img":"https://i.ibb.co/mcHS9xR/reviw1.jpg"
     },
     {
-        "id":2,
         "name": "Theo Jota",
+        "rating":5,
         "description":" unique V-twin-meets-V4 cacophony that sounds like a YZR-M1 MotoGP weapon at full noise",
-        "img":"https://static9.depositphotos.com/1371851/1111/i/600/depositphotos_11117961-stock-photo-handsome-young-man-outdoors.jpg"
+        "img":"https://i.ibb.co/pZdhzsn/jhon.jpg"
     },
     {
-        "id":3,
         "name": "George Baker",
+        "rating":4,
         "description":"very fun bike and very comfortable, I did a trip 2000klms and many other smaller trips.",
-        "img":"https://www.pngall.com/wp-content/uploads/2016/05/Man-Download-PNG.png"
+        "img":"https://i.ibb.co/Hd5Ppqh/thue.jpg"
     },
     {
-        "id":4,
         "name": "Diodra R",
+        "rating":5,
         "description":"Everything that’s good about a standard Ténéré plus a bit more.",
-        "img":"https://i.pinimg.com/originals/97/ed/6b/97ed6b370803649addbf66144c18c194.png"
+        "img":"https://i.ibb.co/nR9jdM6/garag.jpg"
     },
     {
-        "id":5,
         "name": "John Doe",
+        "rating":4,
         "description":"Gentle, easy going and practical, it'll see you through your test.",
         "img":"https://st.depositphotos.com/1499736/1603/i/950/depositphotos_16038229-stock-photo-portrait-of-a-smiling-middle.jpg"
     }

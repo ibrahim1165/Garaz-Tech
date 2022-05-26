@@ -1,17 +1,26 @@
 import axios from 'axios';
 import React,{useEffect, useState} from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init'
 
 const MyOrder = () => {
-    const [user] = useAuthState (auth);
+    const [user] = useAuthState(auth);
     const [orders, setOrders] = useState([]);
     useEffect(()=>{
-        // const url =`http://localhost:5000/order`;
+        // const email = user.email
+        // const url =`http://localhost:5000/order?email=${email}`;
         // fetch(url)
         // .then(res=>res.json())
-        // .then(data=>setOrders(data))
+        // .then(data=>{setOrders(data)})
+
+
+    //     fetch(`http://localhost:5000/order?email=${user.email}`)
+    //     .then((res) => res.json())
+    //     .then((data) => {
+    //         setOrders(data)
+    //     });
+    // },[user]);
+    // return [orders , setOrders]
 
         const getOrder = async()=>{
             const email = user.email;
@@ -20,6 +29,7 @@ const MyOrder = () => {
 
                 const {data}=  await axios.get(url);
                 setOrders(data)
+                console.log(data)
             }
             catch(error){
                 console.log(error.message);

@@ -15,7 +15,6 @@ import MyOrder from './Pages/Dashboard/MyOrder';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
-import Footer from './Pages/Sherd/Footer';
 import Navber from './Pages/Sherd/Navber';
 import Order from './Services/Order';
 import Services from './Services/Services';

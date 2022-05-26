@@ -7,10 +7,10 @@ const AddProduct = () => {
     const { register, handleSubmit } = useForm();
     const [user] = useAuthState(auth);
     const onSubmit =data=>{
-       const added ={
-           email:user.email
-       }
-       const url = `http://localhost:5000/service/${added}`;
+    //    const added ={
+    //        email:user.email
+    //    }
+       const url = `http://localhost:5000/service`;
        fetch(url, { 
         method: 'POST',
         headers: {
@@ -27,7 +27,7 @@ const AddProduct = () => {
         <div>
              <div className="mt-4">
             <h2 className="text-center my-2 d-block text-2xl text-bold ">Please add a Product</h2>
-            <div className=" block p-6 rounded-lg shadow-lg bg-white max-w-md mx-auto">
+            <div className=" block p-6 rounded-lg shadow-lg bg-white max-w-lg mx-auto">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group mb-6">
                         <input type="text" className="form-control block
@@ -94,6 +94,22 @@ const AddProduct = () => {
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="availablequantity" {...register("availablequantity")} />
                     </div>
+                    <div className="form-group mb-6">
+                        <input type="number" className="form-control block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="minimumquantity" {...register("minimumquantity")} />
+                    </div>
 
                     <div className="form-group mb-6">
                         <textarea
@@ -115,7 +131,7 @@ const AddProduct = () => {
                             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             id="text"
                             rows="3"
-                            placeholder="Discreption" {...register('Discreption')}
+                            placeholder="Discreption" {...register('description')}
                         ></textarea>
                     </div>
                     <div className="form-group form-check text-center mb-6">
