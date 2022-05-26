@@ -13,30 +13,43 @@ const Order = () => {
     const [service] = UserService(id)
     const handleOrder = (event) => {
         event.preventDefault();
-        const order = {
-            email: user.email,
-            service: service.name,
-            id: id,
-            address: event.target.address?.value,
-            phone: event.target.phone?.value,
-            quantity: event.target.quantity?.value
+
+        const quantity = event.target.quantity?.value;
+        if(service.minimumquantity > quantity) {
+          toast.error(`Please Minimum products order : ${service.minimumquantity}`);
         }
-        fetch('http://localhost:5000/order', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(order)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.insertedId) {
-                    toast(`Your Order Completed to ${service.name}`)
-                }
-                
-                event.target.reset();
+         if (service.availablequantity <quantity){
+      
+          toast.error(`Available Stock Products  : ${service.availablequantity}`);
+      
+        }
+        else{
+
+            const order = {
+                email: user.email,
+                service: service.name,
+                id: id,
+                address: event.target.address?.value,
+                phone: event.target.phone?.value,
+                quantity:quantity
+            }
+            fetch('http://localhost:5000/order', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(order)
             })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.insertedId) {
+                        toast(`Your Order Completed to ${service.name}`)
+                    }
+                    
+                    event.target.reset();
+                })
+        }
     }
     return (
         <form onSubmit={handleOrder}>
