@@ -4,7 +4,7 @@ import Item from './Item';
 const ManageItem = () => {
     const [services, setServices]= useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/service')
+        fetch('https://gentle-springs-65488.herokuapp.com/service')
         .then(res =>res.json())
         .then(data =>setServices(data))
     },[])
@@ -12,7 +12,7 @@ const ManageItem = () => {
     const DeleteBtn = (id) => {
         const proceed = window.confirm("Are you sure you want to delete");
         if (proceed) {
-          const url = `http://localhost:5000/service/${id}`;
+          const url = `https://gentle-springs-65488.herokuapp.com/service/${id}`;
           fetch(url, {
             method: "DELETE",
           })

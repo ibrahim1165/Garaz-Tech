@@ -10,7 +10,7 @@ const AddProduct = () => {
     //    const added ={
     //        email:user.email
     //    }
-       const url = `http://localhost:5000/service`;
+       const url = `https://gentle-springs-65488.herokuapp.com/service`;
        fetch(url, { 
         method: 'POST',
         headers: {
@@ -21,6 +21,7 @@ const AddProduct = () => {
        .then(res=>res.json())
        .then(data =>{
         console.log(data);
+        
        })
     }
     return (

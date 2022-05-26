@@ -4,7 +4,7 @@ import AlOrderDisplay from './AlOrderDisplay';
 const AllOrder = () => {
     const [orders, setOrders] = useState([]);
     useEffect(()=>{
-        const url =`http://localhost:5000/order`;
+        const url =`https://gentle-springs-65488.herokuapp.com/order`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>{

@@ -10,7 +10,7 @@ const MyOrder = () => {
     useEffect(()=>{
         const getOrder = async()=>{
             const email = user.email;
-            const url =`http://localhost:5000/order/${email}`;
+            const url =`https://gentle-springs-65488.herokuapp.com/order/${email}`;
             try{
 
                 const {data}=  await axios.get(url);
@@ -32,7 +32,7 @@ const MyOrder = () => {
     const DeleteBtn = (id) => {
         const proceed = window.confirm("Are you sure you want to delete");
         if (proceed) {
-          const url = `http://localhost:5000/order/${id}`;
+          const url = `https://gentle-springs-65488.herokuapp.com/order/${id}`;
           fetch(url, {
             method: "DELETE",
           })
