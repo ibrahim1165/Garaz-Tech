@@ -3,6 +3,7 @@ import { ToastContainer,} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import Blog from './Blog/Blog';
+import MyPortfolio from './Blog/My-portfolio/MyPortfolio';
 import Login from './Pages/Auth/Login';
 import RequerAuth from './Pages/Auth/RequerAuth';
 import Singup from './Pages/Auth/Singup';
@@ -33,6 +34,8 @@ function App() {
         <Route path="/service" element={<Services></Services>}></Route>
         <Route path="/order/:id" element={<Order></Order>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path="/myportfolio" element={<MyPortfolio></MyPortfolio>}></Route>
+        
         <Route path="/update/:id" element={<RequerAuth>
           <Update></Update>
         </RequerAuth>}></Route>

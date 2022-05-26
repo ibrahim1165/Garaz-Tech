@@ -15,7 +15,7 @@ const Order = () => {
         event.preventDefault();
 
         const quantity = event.target.quantity?.value;
-        if(service.minimumquantity > quantity) {
+        if(service.minimumquantity > quantity){
           toast.error(`Please Minimum products order : ${service.minimumquantity}`);
         }
          if (service.availablequantity <quantity){
@@ -24,6 +24,7 @@ const Order = () => {
       
         }
         else{
+            const quantity=parseInt (service.availablequantity-quantity)
 
             const order = {
                 email: user.email,
