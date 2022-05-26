@@ -17,7 +17,7 @@ const Services = () => {
                 <p className="text-5xl font-bold ">WE PROVIDE BEST CUSTOM<br />MOTORCYCLE</p>
                 <p className="text-sm m-2">A proper Service Schedule <br />for different bikes is important. Find the most apt bike Service<br /> and Maintenance schedules for your two wheeler.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 px-8 gap-8 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 lg:px-8 gap-8 mt-8 mx-auto">
                 {
                     services.slice(0,6).map(service=><Service
                     key={service.id}

@@ -33,7 +33,7 @@ const Expart = () => {
                 <h1 className="text-5xl font-bold text-black">MEET OUR EXPERT TEAM</h1>
                 <p className="text-sm text-gray-600 my-2">Find here Bike Spare Parts,<br /> Bike Parts wholesaler & Wholesale Dealers. Get contact <br />details & address of companies engaged in wholesale trade,</p>
             </div>
-            <div className="grid sm:grid-cols-1 md:grid-cols-3 mx-20 sm:mx-auto gap-2 lg:px-16 my-8">
+            <div className="grid sm:grid-cols-1 md:grid-cols-3 mx-auto gap-2 my-8 px-24 lg:px-0">
             {
                 exparts.map(expart=><Exparts
                key={expart._id}
