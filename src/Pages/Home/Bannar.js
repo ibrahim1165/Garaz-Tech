@@ -3,8 +3,8 @@ import hader from "../../image/Header.jpg"
 
 const Bannar = () => {
     return (
-        <div>
-        <div className="hero lg:min-h-screen mx-auto" style={{
+        <div className="mx-auto">
+        <div className="hero min-h-screen" style={{
             background: `url(${hader})`,
             backgroundSize:"cover",
         }}>
