@@ -5,7 +5,7 @@ const Item = ({service , DeleteBtn}) => {
     const {name, price, description,availablequantity, img,_id } = service;
     return (
         <div>
-            <div class="card card-compact w-96 bg-white shadow-lg">
+            <div class="card card-compact lg:w-96 bg-white shadow-lg">
                 <figure><img className="" src={img} alt="Shoes" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">Service:{name}</h2>

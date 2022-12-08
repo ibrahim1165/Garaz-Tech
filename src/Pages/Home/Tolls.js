@@ -4,8 +4,9 @@ import best from "../../image/best-seller.png"
 const Tolls = () => {
     return (
         <div className="text-center my-24 ">
+            <div className="text-5xl text-black my-4 font-bold mt-4">Our business summary</div>
             <div className="stats w-3/4 md:grid-cols-3 text-black ">
-                <div className="stat">
+                <div className="stat mt-4">
                     <div className="stat-figure bg-white ">
                     </div>
                     <div className="stat-title bg-white items-center justify-center mx-auto w-16 ">

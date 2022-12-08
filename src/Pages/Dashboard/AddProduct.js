@@ -10,7 +10,7 @@ const AddProduct = () => {
     //    const added ={
     //        email:user.email
     //    }
-       const url = `https://gentle-springs-65488.herokuapp.com/service`;
+       const url = `https://assaingment-12-servicer.up.railway.app/service`;
        fetch(url, { 
         method: 'POST',
         headers: {

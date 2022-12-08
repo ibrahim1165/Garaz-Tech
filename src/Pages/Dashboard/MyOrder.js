@@ -10,7 +10,7 @@ const MyOrder = () => {
     useEffect(()=>{
         const getOrder = async()=>{
             const email = user.email;
-            const url =`https://gentle-springs-65488.herokuapp.com/order/${email}`;
+            const url =`https://assaingment-12-servicer.up.railway.app/order/${email}`;
             try{
 
                 const {data}=  await axios.get(url);
@@ -32,7 +32,7 @@ const MyOrder = () => {
     const DeleteBtn = (id) => {
         const proceed = window.confirm("Are you sure you want to delete");
         if (proceed) {
-          const url = `https://gentle-springs-65488.herokuapp.com/order/${id}`;
+          const url = `https://assaingment-12-servicer.up.railway.app/order/${id}`;
           fetch(url, {
             method: "DELETE",
           })
@@ -62,6 +62,7 @@ const MyOrder = () => {
                             <th>Quantity</th>
                             <th>Address</th>
                             <th>Remove</th>
+                            <th>Payment</th>
                         </tr>
                     </thead>
                     <tbody>

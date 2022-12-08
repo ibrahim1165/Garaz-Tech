@@ -7,7 +7,7 @@ const AddReview = () => {
     const { register, handleSubmit } = useForm();
     const [user] = useAuthState(auth);
     const onSubmit =data=>{
-        const url = `https://gentle-springs-65488.herokuapp.com/review`;
+        const url = `https://assaingment-12-servicer.up.railway.app/review`;
        fetch(url, { 
         method: 'POST',
         headers: {

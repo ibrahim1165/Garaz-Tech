@@ -4,7 +4,7 @@ import User from './User';
 import { useQuery } from "react-query";
 
 const MakeAdmin = () => {
-    const {data:users , isLoading,refetch} = useQuery('user', ()=>fetch('https://gentle-springs-65488.herokuapp.com/user',{
+    const {data:users , isLoading,refetch} = useQuery('user', ()=>fetch('https://assaingment-12-servicer.up.railway.app/user',{
         method: 'GET',
         headers:{
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

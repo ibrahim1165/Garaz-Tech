@@ -24,17 +24,17 @@ const Order = () => {
       
         }
         else{
-            const quantity=parseInt (service.availablequantity-quantity)
-
+            // const quantity = parseInt (service?.availablequantity-quantity)
             const order = {
                 email: user.email,
                 service: service.name,
                 id: id,
+                price:service.price,
                 address: event.target.address?.value,
                 phone: event.target.phone?.value,
                 quantity:quantity
             }
-            fetch('https://gentle-springs-65488.herokuapp.com/order', {
+            fetch('https://assaingment-12-servicer.up.railway.app/order', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -57,11 +57,11 @@ const Order = () => {
             <div style={{
                 background: `url(${backGround})`,
                 backgroundSize: "cover"
-            }} className="hero min-h-screen  text-white">
+            }} className="hero lg:min-h-screen  text-white">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl">
                         <h1 className="text-center text-4xl font-bold text-orange-400 mt-4">Please Conform Your Order </h1>
-                        <div className="card-body w-96 mb-6">
+                        <div className="card-body lg:w-96 mb-6">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text text-white">Name</span>
