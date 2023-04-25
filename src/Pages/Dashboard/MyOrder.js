@@ -10,7 +10,7 @@ const MyOrder = () => {
     useEffect(()=>{
         const getOrder = async()=>{
             const email = user.email;
-            const url =`https://assaingment-12-servicer.up.railway.app/order/${email}`;
+            const url =`https://garaz-tech.onrender.com/order/${email}`;
             try{
 
                 const {data}=  await axios.get(url);
@@ -32,7 +32,7 @@ const MyOrder = () => {
     const DeleteBtn = (id) => {
         const proceed = window.confirm("Are you sure you want to delete");
         if (proceed) {
-          const url = `https://assaingment-12-servicer.up.railway.app/order/${id}`;
+          const url = `https://garaz-tech.onrender.com/order/${id}`;
           fetch(url, {
             method: "DELETE",
           })

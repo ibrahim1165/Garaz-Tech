@@ -7,7 +7,7 @@ const AddReview = () => {
     const { register, handleSubmit } = useForm();
     const [user] = useAuthState(auth);
     const onSubmit =data=>{
-        const url = `https://assaingment-12-servicer.up.railway.app/review`;
+        const url = `https://garaz-tech.onrender.com/review`;
        fetch(url, { 
         method: 'POST',
         headers: {

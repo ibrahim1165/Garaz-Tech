@@ -4,7 +4,7 @@ import AlOrderDisplay from './AlOrderDisplay';
 const AllOrder = () => {
     const [orders, setOrders] = useState([]);
     useEffect(()=>{
-        const url =`https://assaingment-12-servicer.up.railway.app/order`;
+        const url =`https://garaz-tech.onrender.com/order`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>{

@@ -10,7 +10,7 @@ const AddProduct = () => {
     //    const added ={
     //        email:user.email
     //    }
-       const url = `https://assaingment-12-servicer.up.railway.app/service`;
+       const url = `https://garaz-tech.onrender.com/service`;
        fetch(url, { 
         method: 'POST',
         headers: {

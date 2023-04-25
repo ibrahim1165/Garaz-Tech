@@ -34,7 +34,7 @@ const Order = () => {
                 phone: event.target.phone?.value,
                 quantity:quantity
             }
-            fetch('https://assaingment-12-servicer.up.railway.app/order', {
+            fetch('https://garaz-tech.onrender.com/order', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

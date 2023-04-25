@@ -4,7 +4,7 @@ import User from './User';
 import { useQuery } from "react-query";
 
 const MakeAdmin = () => {
-    const {data:users , isLoading,refetch} = useQuery('user', ()=>fetch('https://assaingment-12-servicer.up.railway.app/user',{
+    const {data:users , isLoading,refetch} = useQuery('user', ()=>fetch('https://garaz-tech.onrender.com/user',{
         method: 'GET',
         headers:{
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

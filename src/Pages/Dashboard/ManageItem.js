@@ -4,7 +4,7 @@ import Item from './Item';
 const ManageItem = () => {
     const [services, setServices]= useState([])
     useEffect(()=>{
-        fetch('https://assaingment-12-servicer.up.railway.app/service')
+        fetch('https://garaz-tech.onrender.com/service')
         .then(res =>res.json())
         .then(data =>setServices(data))
     },[])
@@ -12,7 +12,7 @@ const ManageItem = () => {
     const DeleteBtn = (id) => {
         const proceed = window.confirm("Are you sure you want to delete");
         if (proceed) {
-          const url = `https://assaingment-12-servicer.up.railway.app/service/${id}`;
+          const url = `https://garaz-tech.onrender.com/service/${id}`;
           fetch(url, {
             method: "DELETE",
           })
